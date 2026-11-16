@@ -16,7 +16,7 @@ This repository documents a performance test of Minecraft Java Edition on a Meta
 | Refresh rate | 72 Hz |
 | Anti-aliasing | Off |
 | Game | Minecraft Java Edition 26.3, through the Horizon client (exact version to be filled in) |
-| VR app | Horizon VR (unofficial VR port of the Horizon client, MIT licence) |
+| VR app | Horizon VR on Meta Quest 2 (unofficial VR port of the Horizon client, MIT licence) |
 | Recording length | 140 s |
 | Video | 1920 × 1080, HEVC, about 30 fps |
 
@@ -33,9 +33,9 @@ Settings readable on the video captures (to be confirmed):
 | Graphics | Render distance | 16 chunks |
 | Graphics | Simulation distance | 6 chunks |
 | Graphics | Brightness | Auto |
-| Graphics | LOD distance | To be confirmed |
+| Graphics | LOD distance | Present in Horizon VR (value to be confirmed) |
 | Quality | Chunk fade | 0.75 s |
-| Performance | Max framerate | To be confirmed |
+| Performance | Max framerate | 120 FPS (in-game cap) |
 | Performance | VSync | On |
 | Performance | Entity, cave and particle culling | On |
 | Advanced | Render mode | To be confirmed |
@@ -46,7 +46,7 @@ The LOD options (LOD distance, Far Detail, Bluestar Radius) resemble those of th
 
 ## 3. Results
 
-Values read from the video overlay, limited to the range the Quest 2 can display (up to 120 Hz):
+Values read from the video overlay, limited to the 120 FPS in-game cap and the 120 Hz maximum of the Quest 2:
 
 | Metric | Result |
 |---|---|
@@ -96,7 +96,7 @@ File: [`video/benchmark-minecraft-quest2.mp4`](video/benchmark-minecraft-quest2.
 - Exact Quest 2 OS build
 - Exact Minecraft Java version
 - Horizon VR version and Horizon client version
-- Max framerate and LOD settings
+- LOD distance value
 - Measured headset temperature and noise level (dB at 30 cm)
 - Whether the recording was captured on the headset or on a PC
 
