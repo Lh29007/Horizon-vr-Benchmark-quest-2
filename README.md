@@ -10,6 +10,7 @@ Performance test of Minecraft Java Edition running through Horizon VR on a Meta 
 | OS | Latest version |
 | VR app | Horizon VR (unofficial VR port of the Horizon client) |
 | Game | Minecraft Java Edition 26.3 |
+| Renderer | Vulkan |
 | Refresh rate | 72 Hz |
 | Max framerate | 120 FPS |
 | Anti-aliasing | Off |
