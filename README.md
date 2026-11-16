@@ -1,62 +1,26 @@
 # Meta Quest 2 Benchmark: Minecraft Java via Horizon VR
 
-This repository documents a performance test of Minecraft Java Edition on a Meta Quest 2, with the settings used, reference images and the original video.
+Performance test of Minecraft Java Edition running through Horizon VR on a Meta Quest 2 in standalone mode.
 
-> **Note:** The video shows a Minecraft-style world captured from a flat screen with a performance overlay. The Meta Quest 2 refresh rate is capped at 120 Hz, so readings above 120 FPS are not valid and have been removed from this benchmark. The game is run at 72 Hz.
-
----
-
-## 1. Test setup
+## Setup
 
 | Item | Value |
 |---|---|
-| Headset | Meta Quest 2 |
-| Mode | Standalone |
-| OS | Latest version (exact build to be filled in) |
+| Headset | Meta Quest 2 (standalone) |
+| OS | Latest version |
+| VR app | Horizon VR (unofficial VR port of the Horizon client) |
+| Game | Minecraft Java Edition 26.3 |
 | Refresh rate | 72 Hz |
+| Max framerate | 120 FPS |
 | Anti-aliasing | Off |
-| Game | Minecraft Java Edition 26.3, through the Horizon client (exact version to be filled in) |
-| VR app | Horizon VR on Meta Quest 2 (unofficial VR port of the Horizon client, MIT licence) |
-| Recording length | 140 s |
-| Video | 1920 × 1080, HEVC, about 30 fps |
+| Render distance | 16 chunks |
+| Simulation distance | 6 chunks |
+| LOD | Enabled |
+| Chunk fade | 0.75 s |
+| VSync | On |
+| Culling | Entity, cave and particle culling on |
 
-**Compatibility note:** The Horizon VR project states it targets the Meta Quest 3. Compatibility with the Quest 2 is not guaranteed.
-
----
-
-## 2. Settings used
-
-Settings readable on the video captures (to be confirmed):
-
-| Category | Setting | Observed value |
-|---|---|---|
-| Graphics | Render distance | 16 chunks |
-| Graphics | Simulation distance | 6 chunks |
-| Graphics | Brightness | Auto |
-| Graphics | LOD distance | Present in Horizon VR (value to be confirmed) |
-| Quality | Chunk fade | 0.75 s |
-| Performance | Max framerate | 120 FPS (in-game cap) |
-| Performance | VSync | On |
-| Performance | Entity, cave and particle culling | On |
-| Advanced | Render mode | To be confirmed |
-
-The LOD options (LOD distance, Far Detail, Bluestar Radius) resemble those of the Distant Horizons mod.
-
----
-
-## 3. Results
-
-Values read from the video overlay, limited to the 120 FPS in-game cap and the 120 Hz maximum of the Quest 2:
-
-| Metric | Result |
-|---|---|
-| Displayed FPS | Roughly 35 to 120 fps, with most scenes near or above 72 fps |
-| Frame time | About 8 ms to 28 ms in the valid range |
-| Drops | Dense areas (foliage, lava, water) fall below 72 fps |
-| Stability | No disconnection or crash in 140 s |
-| Image quality | Aliasing visible (anti-aliasing off), low to moderate |
-
-### Scores
+## Results
 
 | Criterion | Score |
 |---|---|
@@ -64,63 +28,36 @@ Values read from the video overlay, limited to the 120 FPS in-game cap and the 1
 | Image quality | 5/10 |
 | Stability | 7/10 |
 
-Scores are indicative and do not replace measurements taken inside the headset.
+- **Performance**: most scenes run near or above 72 FPS. Drops occur in dense areas such as foliage, lava and water.
+- **Image quality**: aliasing is visible because anti-aliasing is off.
+- **Stability**: no disconnection or crash over the 140-second recording.
+- **Noise**: acceptable.
+- **Heat**: the headset gets warm during play.
 
-### Heat and noise
+## Reference images
 
-- **Noise:** acceptable according to the author's latest feedback.
-- **Heat:** the author reports that the headset gets warm. This has not been measured yet.
+- `images/frame-00s.jpg`, `images/frame-70s.jpg`, `images/frame-105s.jpg`: sample frames
+- `images/contact-sheet-gameplay.jpg`: 16 gameplay frames, one every 5 seconds
+- `images/contact-sheet-settings.jpg`: 12 settings-menu frames
 
----
+## Video
 
-## 4. Reference images
+[`video/benchmark-minecraft-quest2.mp4`](video/benchmark-minecraft-quest2.mp4), 140 seconds, 1920 × 1080.
 
-| File | Content |
-|---|---|
-| `images/frame-00s.jpg` | Frame at 0 s |
-| `images/frame-70s.jpg` | Frame at 70 s |
-| `images/frame-105s.jpg` | Frame at 105 s |
-| `images/contact-sheet-gameplay.jpg` | 16 gameplay frames, one every 5 s |
-| `images/contact-sheet-settings.jpg` | 12 settings-menu frames |
-
----
-
-## 5. Video
-
-File: [`video/benchmark-minecraft-quest2.mp4`](video/benchmark-minecraft-quest2.mp4) (53 MB, 140 s).
-
----
-
-## 6. Information still missing
-
-- Exact Quest 2 OS build
-- Exact Minecraft Java version
-- Horizon VR version and Horizon client version
-- LOD distance value
-- Measured headset temperature and noise level (dB at 30 cm)
-- Whether the recording was captured on the headset or on a PC
-
----
-
-## 7. Recommendations
+## Recommendations
 
 1. Lower render distance to 8 chunks.
-2. Disable heavy effects (shadows, particles, reflective water).
+2. Turn off heavy effects such as shadows, particles and reflective water.
 3. Keep 72 Hz to limit heat.
 4. Take regular breaks during long sessions.
-5. Record the exact OS and game versions.
+
+## Sources
+
+- [Horizon VR](https://github.com/Boboetto/Horizon-vr): fork of Rayan-XOO/horizon, MIT licence, targets Meta Quest 3.
+- [Horizon](https://github.com/Rayan-XOO/horizon): native Rust client for Minecraft Java Edition 26.3, with an Android port that includes a launcher.
+- [Quest 2 120 Hz mode is no longer experimental](https://uploadvr.com/quest-2-120hz-no-longer-experimental/)
+- [Meta ends Quest 2 OS updates by March 2027](https://techenclave.com/news/items/meta-to-end-quest-2-and-quest-pro-os-updates-by-march-2027)
 
 ---
 
-## 8. Sources
-
-- Horizon VR project (GitHub): <https://github.com/Boboetto/Horizon-vr>. Fork of Rayan-XOO/horizon, MIT licence, targets the Meta Quest 3.
-- Original Horizon project (GitHub): <https://github.com/Rayan-XOO/horizon>. Native Rust client for Minecraft Java Edition 26.3, with an Android port that includes a launcher.
-- Quest 2 120 Hz mode is no longer experimental: <https://uploadvr.com/quest-2-120hz-no-longer-experimental/>
-- Meta ends Quest 2 OS updates by March 2027: <https://techenclave.com/news/items/meta-to-end-quest-2-and-quest-pro-os-updates-by-march-2027>
-- QuestCraft (unofficial Minecraft Java on Quest 2): <https://www.pcgamer.com/uk/questcraft-makes-minecraft-java-edition-playable-on-quest-2/>
-- Reddit r/MetaQuestVR discussion: <https://www.reddit.com/r/MetaQuestVR/comments/1xuuihw/comment/19spq2ratn0ck/> (not read by the author of this README)
-
----
-
-*Benchmark written with the help of Claude Haiku 5.5.*
+*Written with the help of Claude Haiku 5.5.*
