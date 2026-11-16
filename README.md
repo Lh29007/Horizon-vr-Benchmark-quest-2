@@ -15,8 +15,8 @@ This repository documents a performance test of Minecraft Java Edition on a Meta
 | OS | Latest version (exact build to be filled in) |
 | Refresh rate | 72 Hz |
 | Anti-aliasing | Off |
-| Game | Minecraft Java Edition, Rust port (exact version to be filled in) |
-| VR app | Horizon VR (unofficial, MIT licence, Rust-based) |
+| Game | Minecraft Java Edition 26.3, through the Horizon client (exact version to be filled in) |
+| VR app | Horizon VR (unofficial VR port of the Horizon client, MIT licence) |
 | Recording length | 140 s |
 | Video | 1920 × 1080, HEVC, about 30 fps |
 
@@ -94,8 +94,8 @@ File: [`video/benchmark-minecraft-quest2.mp4`](video/benchmark-minecraft-quest2.
 ## 6. Information still missing
 
 - Exact Quest 2 OS build
-- Exact Minecraft Java version and Rust port version
-- Horizon VR version
+- Exact Minecraft Java version
+- Horizon VR version and Horizon client version
 - Max framerate and LOD settings
 - Measured headset temperature and noise level (dB at 30 cm)
 - Whether the recording was captured on the headset or on a PC
@@ -115,6 +115,7 @@ File: [`video/benchmark-minecraft-quest2.mp4`](video/benchmark-minecraft-quest2.
 ## 8. Sources
 
 - Horizon VR project (GitHub): <https://github.com/Boboetto/Horizon-vr>. Fork of Rayan-XOO/horizon, MIT licence, targets the Meta Quest 3.
+- Original Horizon project (GitHub): <https://github.com/Rayan-XOO/horizon>. Native Rust client for Minecraft Java Edition 26.3, with an Android port that includes a launcher.
 - Quest 2 120 Hz mode is no longer experimental: <https://uploadvr.com/quest-2-120hz-no-longer-experimental/>
 - Meta ends Quest 2 OS updates by March 2027: <https://techenclave.com/news/items/meta-to-end-quest-2-and-quest-pro-os-updates-by-march-2027>
 - QuestCraft (unofficial Minecraft Java on Quest 2): <https://www.pcgamer.com/uk/questcraft-makes-minecraft-java-edition-playable-on-quest-2/>
