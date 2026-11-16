@@ -1,4 +1,4 @@
-# Meta Quest 2 Benchmark: Minecraft Java (Rust port)
+# Meta Quest 2 Benchmark: Minecraft Java via Horizon VR
 
 This repository documents a performance test of Minecraft Java Edition on a Meta Quest 2, with the settings used, reference images and the original video.
 
